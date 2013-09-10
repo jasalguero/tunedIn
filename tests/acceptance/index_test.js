@@ -1,4 +1,4 @@
-import Index from 'appkit/routes/index';
+//import Application from 'appkit/routes/application';
 import App from 'appkit/app';
 
 module("Acceptances - Index", {
@@ -7,14 +7,15 @@ module("Acceptances - Index", {
   }
 });
 
-test("index renders", function(){
-  expect(3);
+test("Application renders", function(){
 
   visit('/').then(function(){
-    ok(exists("h2:contains('Welcome to Ember.js')"));
+    debugger;
+    ok('body')
+    // ok(exists("img"));
 
-    var list = find("ul li");
-    equal(list.length, 3);
-    equal(list.text(), "redyellowblue");
+    /*var list = find("row");
+    (list.length, 3);
+    equal(list.text(), "redyellowblue");*/
   });
 });

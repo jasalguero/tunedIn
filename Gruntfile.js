@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                      'clean:build',
                      'lock',
                      // Uncomment this line  & `npm install --save-dev grunt-contrib-coffee` for CoffeeScript support.
-                     // 'coffee',
+                     'coffee',
                      'copy:prepare',
                      'transpile',
                      'jshint',

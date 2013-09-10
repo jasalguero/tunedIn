@@ -1,11 +1,11 @@
-import Index from 'appkit/routes/index';
+import Channel from 'appkit/routes/channels';
 import App from 'appkit/app';
 
 var route;
 
-module("Unit - IndexRoute", {
+module("Unit - ChannelRoute", {
   setup: function(){
-    route = App.__container__.lookup('route:index');
+    route = App.__container__.lookup('route:channels');
   }
 });
 

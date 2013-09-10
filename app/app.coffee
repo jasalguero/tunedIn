@@ -1,6 +1,6 @@
 `import Resolver from 'resolver'`
 
-App = Ember.Application.create
+TunedIn = Ember.Application.create
   LOG_ACTIVE_GENERATION: true
   LOG_VIEW_LOOKUPS: true
   modulePrefix: 'appkit'
@@ -8,8 +8,8 @@ App = Ember.Application.create
 
 `import routes from 'appkit/routes'`
 
-App.Router.map(
+TunedIn.Router.map(
   routes
 )
 
-`export default App`
+`export default TunedIn`

@@ -1,11 +1,117 @@
-@import '../../vendor/normalize-css/normalize.css';
+@import '../../vendor/bootstrap/dist/css/bootstrap.min.css';
 @import '../../vendor/lesshat/lesshat.less';
+
+
+/*
+Header bar: #2d2d31 to #3f3f45 (90°)
+
+Channel bars: - #46bef0 to #146696 (0°)
+		        - inner shadow:  #ffffff (25% opacity , 90°), distance: 2px, size: 1px;
+                         - drop shadow:  #000000 (60% opacity, 180°), distance: 2px, size: 2px;
+
+Show info bars: - #000000 to #ffffff (90°)
+			  - stroke: #000000, 1px, 30% opacity
+		           - drop shadow:  #000000 (50% opacity), distance: 1px, size: 1px;
+
+Show Title: Lucida Grande Bold 30pt, #000000
+Show Subtitle: Lucida grande Regular, 23pt, #000000 (75% opacity)
+Show Time: Lucida grande Regular, 23pt, #000000 (75% opacity)
+
+Color background: #282828 to #a3a3a3 (0° - scale 60%)
+
+Fever Bar: 1) body: - #46bef0 to #146696 (-90°)
+			       - Inner shadow: #ffffff (75% opacity), distance: 1px, size: 1px;
+		  2) Inset: - #000000, 50% opacity;
+				- Inner glow: #00000 (35% opacity), size: 1px;
+			       - Stroke: #000000,  1px (outside), 70% opacity
+
+Avatar: - Inner glow #000000, 60% opacity, size 4px.
+
+Star:  Active:  - #e1cb10 to #e6e779 (90°)
+		     - Inner shadow: #000000, #000000, 50% opacity, distance 1px, size 1px
+	Inactive: - #000000,
+		       - Color overlay: #ffffff, 75% opacity, 
+		       - Inner shadow: #000000, #000000, 50% opacity, distance 1px, size 1px
+*/
 
 /* VARIABLES */
 
 @header_start:#2d2d31;
 @header_end:#3f3f45;
 
-header {
-	.gradient(~"linear-gradient(90deg, #2d2d31 0%,#3f3f45 100%)");
+body {
+	.gradient(~"linear-gradient(90deg, #282828 0%,#a3a3a3 100%)");
+	overflow:hidden;
 }
+
+#container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: -30px;
+	bottom: 0;	
+	padding-right: 15px;
+	overflow-y: scroll;
+}
+
+header {
+	// .gradient(~"linear-gradient(0deg, #2d2d31 0%,#3f3f45 100%)");
+	img{
+		width: 100%;
+	}
+}
+
+#channelList{
+	margin-top: 72px;
+}
+
+.channel {
+	.box-shadow(~"0 0 2px 2px #000, inset 0 0 2px 1px ffffff");
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.channel_logo{
+	.gradient(~"linear-gradient(90deg, #46bef0 0%,#146696 100%)");
+	width: 115px;
+	padding-left: 25px;
+	display: table-cell; 
+	vertical-align: middle;
+	img {
+		height: 115px;
+	}
+}
+
+.broadcasts{
+	overflow: hidden;
+	width: 90%;
+	ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    li {
+		    width: 400px;
+		    height:115px;
+		    float: left;
+		}
+	}
+
+    .broadcast{
+    	/*display: inline-block;
+    	img{
+    		vertical-align: top;
+    	}
+	    .broadcast_info{
+	    	display: inline-block;
+	    	height:115px;
+	    	width: 500px;
+	    	.gradient(~"linear-gradient(0deg, #000000 0%,#ffffff 50%)");
+			.title {
+				color: #000000;
+				font: 25pt Lucida Grande Bold;
+			}
+		}*/
+	}
+}
+
+
