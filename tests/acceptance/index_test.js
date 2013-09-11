@@ -10,8 +10,7 @@ module("Acceptances - Index", {
 test("Application renders", function(){
 
   visit('/').then(function(){
-    debugger;
-    ok('body')
+    ok('body');
     // ok(exists("img"));
 
     /*var list = find("row");

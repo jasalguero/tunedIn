@@ -5,27 +5,23 @@
 				<img {{bindAttr src="img.icons.w110"}}>
 			</div>
 			<div class="broadcasts col-md-11">
-				<ul>	
-					<li style="background-color: #F00"></li>
-			        <li style="background-color: #0F0"></li>
-			        <li style="background-color: #00F"></li>
-			        <li style="background-color: #F00"></li>
-			        <li style="background-color: #0F0"></li>
-				{{!-- {{#each broadcasts}}
-					<li style="background-color:red">
-
-					<div class="broadcast">
-						<img {{bindAttr src="images.backdrops.w154"}}>
-						<div class="broadcast_info">
-							<span class="title">{{program.title}}</span>
-							<span class="subtitle">subtitle</span>
-							<div class="rating">rating</div>
-							<div class="date">date</div>
+				<ul style="width:10000px">
+				{{#each broadcasts}}
+					<li>
+						<div class="broadcast">
+							<div class="preview">
+								{{!-- <img {{bindAttr src="images.backdrops.w154"}}> --}}
+								<img src="http://epg.gettuned.in/backdrops/154/faf88c7b6ec69540252ad218c5fe5a81.jpg">
+							</div>
+							<div class="broadcast_info">
+								<span class="title">{{program.title}}</span>
+								<span class="subtitle">subtitle</span>
+								<div class="rating">rating</div>
+								<div class="date">date</div>
+							</div>
 						</div>
-					</div>
 					</li>
-				
-				{{/each}} --}}
+				{{/each}}	
 				<ul>
 			</div>
 		</div>
